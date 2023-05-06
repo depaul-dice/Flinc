@@ -7,8 +7,9 @@ then
 fi
 
 # step 1: install sciunit from the given executable
+pip install cmake
 pip install sciunit2-0.4.post83.dev36284475.tar.gz
-sciunit create audit-kernel
+sciunit create -f audit-kernel
 
 # step 2: copy kernel.json file of user kernel
 kernelfilepath="$1/kernel.json"
