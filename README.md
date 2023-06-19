@@ -1,3 +1,8 @@
+# Prerequisites
+* Python 3.x with headers and compiler
+* pip >= 20.x
+* glibc>=2.17
+
 # Reproducible Notebook Containers using Application Virtualization
 
 To install and use FLINC in your Jupyter environment, follow the steps 
