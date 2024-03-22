@@ -2,6 +2,7 @@
 * Python 3.x with headers and compiler
 * pip >= 20.x
 * glibc>=2.17
+* Ubuntu 22.04
 
 # Reproducible Notebook Containers using Application Virtualization
 
