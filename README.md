@@ -2,7 +2,6 @@
 * Python 3.x with headers and compiler
 * pip >= 20.x
 * glibc>=2.17
-* Ubuntu 20.04
 
 # Reproducible Notebook Containers using Application Virtualization
 
@@ -28,8 +27,7 @@ installation of sciunit, audit kernel, and repeat kernel.
 
    
 6. Select the audit kernel from within the notebook and execute your notebook 
-code. After execution completes, select 'No Kernel' from the list or shutdown the kernel and wait 30 
-seconds to 1 minute to complete.
+code. After execution completes, select 'No Kernel' from the list or shutdown the kernel and wait 30 seconds to 1 minute to complete the auditing.
 7. Repeat your notebook code on the same or different machine by selecting 
 the repeat kernel.
 8. After using the repeat kernel, select No Kernel again to finish.
@@ -42,7 +40,7 @@ view using:
 1. The install.sh script must only be executed once.
    Once the audit and repeat kernels have been installed, the script 
 should not be run again.
-2. No existing file should be deleted or modified in the flinc directory.
+2. No existing file should be deleted or modified in the Flinc directory.
 3. After testing one notebook with the audit and repeat kernels successfully, 
    shut down the server and start it again before running another notebook with the audit kernel.
 4. If you run your code using the audit kernel on machine #1, you can repeat it using the repeat kernel on machine #2. To do this, first execute your code using audit kernel, and then run 'sciunit copy' to obtain a unique code. Take that code and run `sciunit open <code>`. This transfers the contents of the notebook container to machine #2 from machine #1.
