@@ -21,7 +21,13 @@ cp ${kernelfilepath} ${auditkerneldir}
 auditkernelpath="audit-kernel/kernel.json"
 add="\\\t\"$(pwd)/handler.py\",\"sciunit\",\"exec\","
 # sed -i "/prepend_and_launch.sh\",/a $add" ${auditkernelpath}
-sed -i "/bin\/python/i $add" ${auditkernelpath}
+sed -i "/argv\": \[/a $add" ${auditkernelpath}
+
+if ! command -v python &> /dev/null
+then
+    apt-get update
+    apt-get install -y python-is-python3
+fi
 
 # step 4: update kernel name
 sed -i -E "s/(\"display_name\": \")(.+)\",/\1Sciunit Audit(\2)\",/" ${auditkernelpath}
