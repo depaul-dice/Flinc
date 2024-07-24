@@ -41,6 +41,5 @@ view using:
    Once the audit and repeat kernels have been installed, the script 
 should not be run again.
 2. No existing file should be deleted or modified in the Flinc directory.
-3. After testing one notebook with the audit and repeat kernels successfully, 
-   shut down the server and start it again before running another notebook with the audit kernel.
+3. Run one notebook in a Sciunit project with the audit and repeat kernels. If you have multiple notebooks to audit, create separate Sciunit projects for each notebook.
 4. If you run your code using the audit kernel on machine #1, you can repeat it using the repeat kernel on machine #2. To do this, first execute your code using audit kernel, and then run 'sciunit copy' to obtain a unique code. Take that code and run `sciunit open <code>`. This transfers the contents of the notebook container to machine #2 from machine #1.
