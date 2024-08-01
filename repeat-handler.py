@@ -23,7 +23,7 @@ def sigTermHandler(*_):
         child.send_signal(signal.SIGKILL)
 
 def get_last_execution():
-    em = ExecutionManager('/root/sciunit/audit-kernel')
+    em = ExecutionManager(os.path.expanduser('~') + '/sciunit/audit-kernel')
     return em.get_last_id()
 
 print("Repeat Kernel")
