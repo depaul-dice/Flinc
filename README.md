@@ -37,6 +37,7 @@ view using:
    `sciunit list`
 
 By running the above command, you will see information about the executable(s) including their corresponding IDs (e.g., e1, e2 etc.). 
+
 9. To view the dependencies to run the notebook associated with execution ID e1, you need to run the following command:
 
    `sciunit export e1`
