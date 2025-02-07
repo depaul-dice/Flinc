@@ -36,13 +36,13 @@ view using:
 
    `sciunit list`
 
-By running the above command, you will see information about the executable(s) including their corresponding IDs (e.g., e1, e2 etc.). 
+   By running the above command, you can see information about the executable(s) including their corresponding IDs (e.g., `e1`, `e2` etc.). 
 
-9. To view the dependencies to run the notebook associated with execution ID e1, you need to run the following command:
+9. To view the dependencies to run the notebook associated with execution ID `e1`, you need to run the following command:
 
    `sciunit export e1`
 
-It will create a file named `e1-requirements.txt` listing all the dependencies.
+   It will create a file named `e1-requirements.txt` in the location of the notebook to list all the dependencies.
 
 **NOTES**
 1. The install.sh script must only be executed once.
