@@ -26,15 +26,23 @@ installation of sciunit, audit kernel, and repeat kernel.
    `jupyter kernelspec list`
 
    
-6. Select the audit kernel from within the notebook and execute your notebook 
+5. Select the audit kernel from within the notebook and execute your notebook 
 code. After execution completes, select 'No Kernel' from the list or shutdown the kernel and wait 30 seconds to 1 minute to complete the auditing.
-7. Repeat your notebook code on the same or different machine by selecting 
+6. Repeat your notebook code on the same or different machine by selecting 
 the repeat kernel.
-8. After using the repeat kernel, select No Kernel again to finish.
-9. Sciunit will store your notebook as an executable which you can 
+7. After using the repeat kernel, select No Kernel again to finish.
+8. Sciunit will store your notebook as an executable which you can 
 view using:
 
    `sciunit list`
+
+   By running the above command, you can see information about the executable(s) including their corresponding IDs (e.g., `e1`, `e2`, etc.). 
+
+9. To view the dependencies to run the notebook associated with execution ID `e1`, you need to run the following command:
+
+   `sciunit export e1`
+
+   It will create a file named `e1-requirements.txt` in the notebook location to list all the dependencies.
 
 **NOTES**
 1. The install.sh script must only be executed once.
